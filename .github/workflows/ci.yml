@@ -1,6 +1,6 @@
 name: First workflow
 
-on: [push, pull_request]
+on: [push, pull_request] # pull request is used only in case of forked repos, in PRs from branches in the same repo, push is enough
 
 jobs:
   build: # job name, it can be anything
