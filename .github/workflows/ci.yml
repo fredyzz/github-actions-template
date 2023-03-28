@@ -12,6 +12,9 @@ jobs:
         run: echo "Hello, world! from ${{github.workflow}} triggered by ${{github.event_name}}"
 
       - name: Run a multi-line script
+        env: 
+          JOB_CONTEXT: ${{toJson(job)}}
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo "Job Context: $JOB_CONTEXT"
